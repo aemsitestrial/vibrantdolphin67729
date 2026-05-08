@@ -19,9 +19,57 @@
     ]
   },
   {
+    "id": "cards-product",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-promo",
+    "components": [
+      "card"
+    ]
+  },
+  {
+    "id": "cards-service",
+    "components": [
+      "card"
+    ]
+  },
+  {
     "id": "cards",
     "components": [
       "card"
+    ]
+  },
+  {
+    "id": "columns-contact",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
+    ]
+  },
+  {
+    "id": "columns-feature",
+    "components": [
+      "column"
+    ]
+  },
+  {
+    "id": "column",
+    "components": [
+      "text",
+      "image",
+      "button",
+      "title"
     ]
   },
   {

@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-service",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-08T16:07:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www2.telenet.be",
+    "originPage": "homepage",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "service-finder",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "heading + link list OR icon + heading + text + CTAs",
+    "buttonCount": 2,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "service finder sections",
+      "product category navigation cards",
+      "mixed content cards with icons and links"
+    ],
+    "notSuitableFor": [
+      "image-heavy product cards",
+      "promotional cards with badges",
+      "simple text-only cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T16:07:00.000Z"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "status": "success",
+  "url": "https://www2.telenet.be",
+  "path": "index",
+  "timestamp": "2026-05-08T16:38:03.685Z",
+  "title": "Supersnel internet, mobiel, telefonie en tv | Telenet",
+  "template": "homepage",
+  "blocks": [
+    "hero-brand",
+    "cards-product",
+    "columns-contact",
+    "columns-contact",
+    "columns-contact",
+    "columns-contact",
+    "columns-contact",
+    "columns-contact",
+    "columns-contact"
+  ]
+}

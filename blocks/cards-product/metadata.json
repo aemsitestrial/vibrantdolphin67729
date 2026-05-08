@@ -1,0 +1,39 @@
+{
+  "variantName": "cards-product",
+  "baseBlock": "cards",
+  "version": "1.0.0",
+  "created": "2026-05-08T16:07:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://www2.telenet.be",
+    "originPage": "homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "product-showcase",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "image + product name + specs + price",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "product listing cards with images",
+      "device/hardware showcase grids",
+      "e-commerce product tiles with pricing"
+    ],
+    "notSuitableFor": [
+      "text-only promotional cards",
+      "service/feature cards without product images",
+      "article/blog cards"
+    ]
+  },
+  "usage": {
+    "pagesUsing": ["/index"],
+    "reuseCount": 1,
+    "lastUsed": "2026-05-08T16:07:00.000Z"
+  }
+}
