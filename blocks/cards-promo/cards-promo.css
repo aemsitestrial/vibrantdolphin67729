@@ -1,27 +1,124 @@
-.cards-promo > ul {
-  list-style: none;
+.cards-promo-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+}
+
+.cards-promo {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cards-promo > div {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  min-height: 420px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 0.06);
+  transition: box-shadow 0.2s ease;
+  cursor: pointer;
+  background: #faeb50;
+  color: #000;
+}
+
+.cards-promo > div:hover {
+  box-shadow: 0 4px 16px rgb(0 0 0 / 0.12);
+}
+
+.cards-promo > div.dark {
+  background: #000;
+  color: #fff;
+}
+
+.cards-promo > div.image-bg {
+  background-size: cover;
+  background-position: center;
+  color: #000;
+}
+
+/* Badge cell */
+.cards-promo > div > div:first-child {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin-bottom: 12px;
+}
+
+.cards-promo > div > div:first-child p {
   margin: 0;
+}
+
+/* Text + CTA cell */
+.cards-promo > div > div:nth-child(2) {
+  flex: 1;
+}
+
+.cards-promo > div > div:nth-child(2) h3 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-font-size-l);
+  font-weight: 400;
+  margin: 0 0 12px;
+  line-height: 1.15;
+}
+
+.cards-promo > div > div:nth-child(2) p {
+  font-size: var(--body-font-size-xs);
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+main .cards-promo a.button:any-link {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: var(--body-font-size-xs);
+  font-weight: 500;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  gap: 24px;
+  margin: 0;
+  text-decoration: none;
 }
 
-.cards-promo > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+main .cards-promo a.button:any-link::after {
+  content: " →";
 }
 
-.cards-promo .cards-promo-card-body {
-  margin: 16px;
+main .cards-promo a.button:any-link:hover {
+  text-decoration: underline;
 }
 
-.cards-promo .cards-promo-card-image {
-  line-height: 0;
+/* Image cell */
+.cards-promo > div > div:nth-child(3) {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 16px;
 }
 
-.cards-promo > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
+.cards-promo > div > div:nth-child(3) img {
+  max-width: 180px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Hidden cells */
+.cards-promo > div > div.variant-meta {
+  display: none;
+}
+
+@media (width >= 900px) {
+  .cards-promo {
+    flex-direction: row;
+    padding: 0 32px;
+  }
+
+  .cards-promo > div {
+    flex: 1;
+    min-height: 520px;
+  }
 }
