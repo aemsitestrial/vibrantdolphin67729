@@ -13,8 +13,14 @@
       "button",
       "title",
       "hero",
+      "hero-brand",
       "cards",
+      "cards-product",
+      "cards-promo",
+      "cards-service",
       "columns",
+      "columns-contact",
+      "columns-feature",
       "fragment"
     ]
   },
