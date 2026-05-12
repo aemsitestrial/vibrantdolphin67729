@@ -1,0 +1,5 @@
+mountpoints:
+  /:
+    url: "https://author-p153710-e1614654.adobeaemcloud.com/bin/franklin.delivery/aemsitestrial/vibrantdolphin67729/main"
+    type: "markup"
+    suffix: ".html"
