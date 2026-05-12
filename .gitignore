@@ -1,11 +1,12 @@
-.hlx/
-coverage/
-logs/
-node_modules/
+.hlx/*
+coverage/*
+logs/*
+node_modules
+.parcel-cache
 
 helix-importer-ui
 .DS_Store
 *.bak
 .idea
-.wrangler
-.claude
+# Ignore .map files in scripts/__dropins__/ directory and all its subdirectories
+scripts/__dropins__/**/*.map

@@ -1,57 +1,82 @@
 footer {
-  a {
-    text-decoration: none;
-  }
+  background-color: var(--frescopa-color-background);
+  font: var(--type-body-2-default-font);
+  letter-spacing: var(--type-body-2-default-letter-spacing);
+}
 
-  .footer-content {
-    max-width: var(--grid-container-width);
-    margin: 48px auto;
-    font-size: 14px;
-  }
+footer .footer > div {
+  margin: auto;
+  max-width: var(--site-width);
+  padding: 40px 24px 24px;
+}
 
-  .section-legal ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .section-copyright p {
-    margin: 0;
-  }
-
-  .section {
-    .default-content {
-      max-width: initial;
-      margin: initial;
-    }
-  }
+footer .section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 @media (width >= 900px) {
-  footer {
-    margin: 0;
+  footer .section {
+    flex-direction: row;
+  }
+}
 
-    .section-legal {
-      display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
-      margin-bottom: 24px;
 
-      ul {
-        display: flex;
-        justify-content: end;
-        gap: var(--spacing-xl);
-      }
+footer h6 {
+  font-family: roboto, sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+}
 
-      li {
-        margin: 0;
-      }
-    }
+footer .default-content-wrapper h6 {
+  margin-top: 0;
+}
 
-    .section-copyright {
-      display: flex;
-      justify-content: end;
-      gap: var(--spacing-xl);
-    }
+footer .footer .section:last-child > .default-content-wrapper {
+  display: flex ;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer p,li {
+  margin: 0;
+  font-size: 13px;
+  text-decoration: none;
+  color: var(--frescopa-color-text);
+  margin-bottom: 10px;  
+}
+
+.footer li a {
+  font-size: 13px;
+  font-weight: 300;
+  text-decoration: none;
+  color: var(--frescopa-color-text);
+}
+
+footer ul {
+  list-style-type: none;
+  padding: 0;
+
+}
+
+footer .button-container {
+  width: 200px;
+  margin-bottom: 0;
+}
+
+footer .columns-wrapper .columns div {
+  vertical-align: top;
+  min-width: max-content;
+  margin-bottom: 20px;
+}
+
+@media (width >= 900px) {
+  footer .footer > div {
+    padding: 40px 32px 10px;
+  }
+
+  footer .columns > div {
+    gap: 80px;
   }
 }

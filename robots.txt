@@ -1,7 +1,15 @@
-# Robots.txt - Friendly to LLM and SEO crawlers
-# Last updated: 2025-07-23
-
 User-agent: *
 Allow: /
+Disallow: /drafts/
+Disallow: /enrichment/
+Disallow: /tools/
+Disallow: /plugins/experimentation/
 
-Sitemap: https://docs.da.live/sitemap.xml
+User-agent: GPTBot
+Disallow: /blog/cold-brewing-101
+User-agent: OAI-SearchBot
+Disallow: /blog/cold-brewing-101
+User-agent: OAI-User
+Disallow: /blog/cold-brewing-101
+
+Sitemap: https://frescopa.coffee/sitemap-index.xml
