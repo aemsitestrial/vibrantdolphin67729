@@ -1,0 +1,214 @@
+/* Account Hub Block - 3-card layout */
+.account-hub {
+  --hub-gap: 24px;
+  --hub-card-radius: 24px;
+  --hub-card-padding: 24px;
+  --hub-card-shadow: 0 4px 8px rgba(20, 19, 18, 0.04);
+  --hub-brand-bg: #ffc421;
+  --hub-card-bg: #fff;
+  --hub-text-color: #000;
+  --hub-link-color: rgb(41, 29, 24);
+  --hub-btn-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--hub-gap);
+}
+
+/* Rows become cards */
+.account-hub > div {
+  background: var(--hub-card-bg);
+  border-radius: var(--hub-card-radius);
+  box-shadow: var(--hub-card-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Second card (compose combo) has brand yellow bg */
+.account-hub > div:nth-child(2) {
+  background: var(--hub-brand-bg);
+}
+
+/* Card cells */
+.account-hub > div > div {
+  padding: var(--hub-card-padding);
+}
+
+/* Links card (first card) */
+.account-hub > div:first-child > div {
+  padding: var(--hub-card-padding);
+}
+
+.account-hub > div:first-child p strong {
+  font-size: 22px;
+  font-weight: 700;
+  font-family: var(--heading-font-family, sans-serif);
+}
+
+.account-hub > div:first-child p {
+  margin: 0;
+}
+
+.account-hub > div:first-child ul {
+  list-style: none;
+  margin: 16px 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.account-hub > div:first-child ul li {
+  padding: 6px 0;
+}
+
+.account-hub > div:first-child ul li a {
+  color: var(--hub-link-color);
+  text-decoration: none;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.account-hub > div:first-child ul li a::after {
+  content: "›";
+  font-size: 22px;
+  font-weight: 400;
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+/* Icon cell (second card, first child) */
+.account-hub > div:nth-child(2) > div:first-child {
+  padding: var(--hub-card-padding) var(--hub-card-padding) 0;
+}
+
+.account-hub > div:nth-child(2) > div:first-child img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Text cells in product cards */
+.account-hub > div:nth-child(2) > div:last-child,
+.account-hub > div:nth-child(3) > div:last-child {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 0 var(--hub-card-padding) var(--hub-card-padding);
+}
+
+/* Push buttons to the bottom */
+.account-hub > div:nth-child(2) > div:last-child .button-wrapper,
+.account-hub > div:nth-child(3) > div:last-child .button-wrapper {
+  margin-top: auto;
+}
+
+/* Image cell in third card */
+.account-hub > div:nth-child(3) > div:first-child {
+  padding: 0;
+  order: -1;
+}
+
+.account-hub > div:nth-child(3) > div:first-child img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Headings */
+.account-hub h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0 0 8px;
+  font-family: var(--heading-font-family, sans-serif);
+}
+
+.account-hub > div:nth-child(2) h3 {
+  font-size: 32px;
+  line-height: 1;
+  margin: 0 0 12px;
+}
+
+.account-hub > div:nth-child(3) h3 {
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.account-hub h3 strong {
+  font-weight: 700;
+}
+
+/* Paragraphs */
+.account-hub p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+  color: var(--hub-text-color);
+}
+
+/* Primary button (compose card) */
+main .account-hub > div:nth-child(2) a.button:any-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: var(--hub-btn-radius);
+  padding: 10px 12px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  margin-top: auto;
+}
+
+/* Secondary button (combos card) */
+main .account-hub > div:nth-child(3) a.button:any-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: transparent;
+  color: #000;
+  border: none;
+  border-radius: var(--hub-btn-radius);
+  padding: 10px 12px;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: inset 0 0 0 2px #000;
+  margin-top: auto;
+}
+
+/* Button wrapper */
+main .account-hub .button-wrapper {
+  margin-top: auto;
+}
+
+@media (width >= 900px) {
+  .account-hub {
+    flex-direction: row;
+  }
+
+  .account-hub > div {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .account-hub > div:nth-child(2) h3 {
+    font-size: 40px;
+    line-height: 1;
+  }
+
+  .account-hub > div:nth-child(3) h3 {
+    font-size: 28px;
+    line-height: 1.1;
+  }
+}

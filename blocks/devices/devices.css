@@ -1,0 +1,174 @@
+/* Devices block — product card grid */
+.devices {
+  --devices-bg: transparent;
+  --devices-card-bg: #fff;
+  --devices-card-radius: 16px;
+  --devices-card-padding: 16px;
+  --devices-gap: 24px;
+  --devices-text: #000;
+  --devices-link: rgb(41, 29, 24);
+  --devices-label-size: 18px;
+  --devices-name-size: 14px;
+  --devices-spec-size: 14px;
+  --devices-price-size: 16px;
+  --devices-old-price-size: 12px;
+  --devices-cta-size: 18px;
+
+  background: var(--devices-bg);
+  color: var(--devices-text);
+  text-align: center;
+  padding: 24px 0;
+}
+
+/* Label row (TOESTELLEN) */
+.devices > div:first-child {
+  margin-bottom: 4px;
+}
+
+.devices > div:first-child p {
+  font-size: var(--devices-label-size);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* Heading row */
+.devices > div:nth-child(2) {
+  margin-bottom: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.devices > div:nth-child(2) h2 {
+  font-size: var(--heading-font-size-xl);
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+/* Product card rows (rows 3–6) */
+.devices > div:nth-child(n+3):nth-child(-n+6) {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--devices-card-bg);
+  border-radius: var(--devices-card-radius);
+  padding: var(--devices-card-padding);
+  vertical-align: top;
+  width: calc(50% - var(--devices-gap) / 2);
+  margin-bottom: var(--devices-gap);
+  box-sizing: border-box;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Card image cell */
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:first-child {
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+}
+
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:first-child img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Card text cell */
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:last-child {
+  padding: 4px 8px 8px;
+}
+
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:last-child p {
+  margin: 2px 0;
+  line-height: 1.4;
+}
+
+/* Product name link */
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:last-child a {
+  font-size: var(--devices-name-size);
+  font-weight: 700;
+  color: var(--devices-link);
+  text-decoration: underline;
+}
+
+/* Spec line */
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:last-child p:nth-child(2) {
+  font-size: var(--devices-spec-size);
+  color: var(--devices-text);
+}
+
+/* Price line */
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:last-child p:nth-child(3) {
+  font-size: var(--devices-price-size);
+}
+
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:last-child p:nth-child(3) b {
+  font-weight: 700;
+}
+
+.devices > div:nth-child(n+3):nth-child(-n+6) > div:last-child p:nth-child(3) span {
+  font-size: var(--devices-old-price-size);
+  font-weight: 400;
+  color: #666;
+  white-space: nowrap;
+}
+
+/* CTA row (last row) */
+.devices > div:last-child {
+  margin-top: 16px;
+}
+
+main .devices > div:last-child a.button:any-link,
+.devices > div:last-child a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--devices-cta-size);
+  font-weight: 500;
+  color: var(--devices-text);
+  text-decoration: none;
+  border: 2px solid var(--devices-text);
+  border-radius: 2.4em;
+  padding: 10px 24px;
+  background: none;
+}
+
+main .devices > div:last-child a.button:any-link:hover,
+.devices > div:last-child a:hover {
+  background: var(--light-color, #f8f8f8);
+}
+
+/* Card grid container — use flex wrap on the cards section */
+.devices > div:nth-child(n+3):nth-child(-n+6) {
+  margin-left: calc(var(--devices-gap) / 2);
+  margin-right: calc(var(--devices-gap) / 2);
+}
+
+/* Tablet: 3 cards in a row */
+@media (width >= 600px) {
+  .devices > div:nth-child(n+3):nth-child(-n+6) {
+    width: calc(33.333% - var(--devices-gap));
+  }
+
+  .devices > div:nth-child(n+3):nth-child(-n+6) > div:first-child img {
+    max-width: 140px;
+  }
+}
+
+/* Desktop: 4 cards in a row */
+@media (width >= 900px) {
+  .devices > div:nth-child(n+3):nth-child(-n+6) {
+    width: calc(25% - var(--devices-gap));
+  }
+
+  .devices > div:nth-child(2) h2 {
+    font-size: var(--heading-font-size-xxl);
+  }
+
+  .devices > div:nth-child(n+3):nth-child(-n+6) > div:first-child img {
+    max-width: 160px;
+  }
+}

@@ -1,0 +1,137 @@
+/* value-props block */
+.value-props-wrapper {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.value-props {
+  --vp-bg: rgb(240, 238, 235);
+  --vp-text: rgb(0, 0, 0);
+  --vp-gap: 24px;
+  --vp-padding: 40px 20px 48px;
+
+  background: var(--vp-bg);
+  color: var(--vp-text);
+  padding: var(--vp-padding);
+  max-width: 1132px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Hide the illustration row on mobile */
+.value-props > div:first-child {
+  display: none;
+}
+
+/* Heading row */
+.value-props > div:nth-child(2) {
+  margin-bottom: 20px;
+}
+
+/* Main heading */
+.value-props h2 {
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.value-props h2 strong {
+  font-weight: 700;
+}
+
+/* Item rows (icon + text) */
+.value-props > div:nth-child(n+3) {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.value-props > div:last-child {
+  margin-bottom: 0;
+}
+
+/* Icon cell */
+.value-props > div:nth-child(n+3) > div:first-child {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.value-props > div:nth-child(n+3) > div:first-child img {
+  width: 48px;
+  height: 48px;
+}
+
+/* Text cell */
+.value-props > div:nth-child(n+3) > div:last-child {
+  flex: 1;
+}
+
+.value-props h3 {
+  font-family: var(--heading-font-family, sans-serif);
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0 0 8px;
+}
+
+.value-props h3 strong {
+  font-weight: 700;
+}
+
+.value-props p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  color: var(--vp-text);
+}
+
+/* Desktop layout: 2 columns - illustration left, content right */
+@media (width >= 900px) {
+  .value-props {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto;
+    gap: 0 48px;
+    padding: 64px 48px;
+    align-items: start;
+  }
+
+  /* Show illustration on desktop */
+  .value-props > div:first-child {
+    display: block;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    align-self: center;
+  }
+
+  .value-props > div:first-child img {
+    width: 100%;
+    height: auto;
+    max-width: 320px;
+  }
+
+  /* Heading row in right column */
+  .value-props > div:nth-child(2) {
+    grid-column: 2;
+    margin-bottom: 32px;
+  }
+
+  /* Item rows go in right column */
+  .value-props > div:nth-child(n+3) {
+    grid-column: 2;
+  }
+
+  .value-props h2 {
+    font-size: 56px;
+  }
+
+  .value-props h3 {
+    font-size: 32px;
+    line-height: 1.0;
+  }
+}
