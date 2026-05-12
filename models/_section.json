@@ -4,9 +4,6 @@
       "title": "Section",
       "id": "section",
       "plugins": {
-        "da": {
-          "unsafeHTML": "<div></div>"
-        },
         "xwalk": {
           "page": {
             "resourceType": "core/franklin/components/section/v1/section",
@@ -36,36 +33,7 @@
             {
               "name": "Highlight",
               "value": "highlight"
-            },
-            {
-              "name": "Numbered Features",
-              "value": "numbered"
-            },
-            {
-              "name": "Background Color",
-              "value": "background"
-            },
-            {
-              "name": "Card Tiles",
-              "value": "card-tiles"
-            },
-            {
-              "name": "Home",
-              "value": "home"
-            },
-            {
-              "name": "Article",
-              "value": "article"
-            },
-            {
-              "name": "Blog",
-              "value": "blog"
-            },
-            {
-              "name": "Columns",
-              "value": "columns"
             }
-            
           ]
         }
       ]
@@ -80,29 +48,9 @@
         "button",
         "title",
         "hero",
-        "article",
         "cards",
         "columns",
-        "teaser",
-        "fragment",
-        "offer",
-        "storelocator",
-        "blog-list",
-        "product-recommendations",
-        "product-teaser",
-        "product-list-page",
-        "product-list-page-custom",
-        "product-details",
-        "video",
-        "dm-video",
-        "dm-scene7-template",
-        "form",
-        "embed-adaptive-form",
-        "reward",
-        "reward-sticky",
-        "sticky-cta",
-        "quiz",
-        "insights"
+        "fragment"
       ]
     }
   ]

@@ -1,12 +1,14 @@
-/* eslint-disable import/no-cycle */
 /*
  * Fragment Block
  * Include content on a page as a fragment.
  * https://www.aem.live/developer/block-collection/fragment
  */
 
-import { decorateMain } from '../../scripts/scripts.js';
-import { getRootPath } from '../../scripts/configs.js';
+// eslint-disable-next-line import/no-cycle
+import {
+  decorateMain,
+} from '../../scripts/scripts.js';
+
 import {
   loadSections,
 } from '../../scripts/aem.js';
@@ -14,14 +16,13 @@ import {
 /**
  * Loads a fragment.
  * @param {string} path The path to the fragment
- * @returns {Promise<HTMLElement>} The root element of the fragment
+ * @returns {HTMLElement} The root element of the fragment
  */
 export async function loadFragment(path) {
   if (path && path.startsWith('/')) {
-    const root = getRootPath().replace(/\/$/, '');
     // eslint-disable-next-line no-param-reassign
     path = path.replace(/(\.plain)?\.html/, '');
-    const resp = await fetch(`${root}${path}.plain.html`);
+    const resp = await fetch(`${path}.plain.html`);
     if (resp.ok) {
       const main = document.createElement('main');
       main.innerHTML = await resp.text();
